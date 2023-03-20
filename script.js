@@ -53,9 +53,21 @@
 
 // console.log(newArg);
 
-const newArr = () => {
-  str = "I love arrays they are my favorite";
-  return str.split(" ");
-};
+// const newArr = () => {
+//   str = "I love arrays they are my favorite";
+//   return str.split(" ");
+// };
 
-console.log(newArr());
+// console.log(newArr());
+
+const isAnagram = () => {
+  s = "caat";
+  t = "taca";
+  sSorted = s.split("").sort().join();
+
+  tSorted = s.split("").sort().join();
+  if (sSorted === tSorted) {
+    return true;
+  }
+};
+console.log(isAnagram());
