@@ -57,4 +57,5 @@ const newArr = () => {
   str = "I love arrays they are my favorite";
   return str.split(" ");
 };
+
 console.log(newArr());
