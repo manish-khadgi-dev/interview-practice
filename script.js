@@ -60,14 +60,38 @@
 
 // console.log(newArr());
 
-const isAnagram = () => {
-  s = "caat";
-  t = "taca";
-  sSorted = s.split("").sort().join();
+// const isAnagram = () => {
+//   s = "caat";
+//   t = "taca";
+//   sSorted = s.split("").sort().join();
 
-  tSorted = s.split("").sort().join();
-  if (sSorted === tSorted) {
-    return true;
+//   tSorted = s.split("").sort().join();
+//   if (sSorted === tSorted) {
+//     return true;
+//   }
+// };
+// console.log(isAnagram());
+
+const isAnagram = () => {
+  s = "canat";
+  t = "tkcak";
+
+  if (s.length !== t.length) return false;
+  const sCount = {};
+  const tCount = {};
+
+  const Nlen = s.length;
+  for (let i = 0; i < Nlen; i++) {
+    if (!sCount[s[i]]) sCount[s[i]] = 0;
+    if (!tCount[t[i]]) tCount[t[i]] = 0;
+    sCount[s[i]]++;
+    tCount[s[i]]++;
   }
+  console.log(sCount, tCount);
+
+  for (let ch in sCount) {
+    if (sCount[ch] !== tCount[ch]) return false;
+  }
+  return true;
 };
 console.log(isAnagram());
